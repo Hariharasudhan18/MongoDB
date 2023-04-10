@@ -1,0 +1,5 @@
+{ name : "abi" }
+
+{ "_id": {$gt: 2} }
+
+{ name : { $eq : "sabha" } }
