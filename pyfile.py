@@ -1,7 +1,7 @@
 import pymongo
 from pymongo import MongoClient
 
-cluster = MongoClient("mongodb+srv://hari:dwaynejohnson@cluster0.xw0uwcb.mongodb.net/?retryWrites=true&w=majority")
+cluster = MongoClient("mongodb+srv://hari:hari1993@cluster0.xw0uwcb.mongodb.net/?retryWrites=true&w=majority")
 db = cluster["test_db"]
 collection = db["test_table"]
 
@@ -41,10 +41,13 @@ post2 = {"_id":4,"name":"vickeee","score":10}
 # collections = training.list_collection_names()
 # print(collections)
 
-inserted_id = collection.test_table.insert_one({"_id":5,"name":"karthi","score":10}).inserted_id
+# inserted_id = collection.insert_one({"_id":6,"name":"naveen","score":10}).inserted_id
 
-print(inserted_id)
+# print(inserted_id)
+all_record = collection.find({})
 
+for each_record in all_record:
+    print(each_record)
 
 # output = collection.test_table.find({"name":"abi"})
 # print(output)
@@ -124,3 +127,9 @@ print(inserted_id)
 # db.recipes.dropIndex("cook_time_-1")
 
 # db.createCollection("error_log", { capped: true, size: 10000, max: 10000 })
+
+
+
+# ``` Tech with Tim (MongoDB Tutorials - MongoDB + Python #2 - Schema Validation, Advanced Queries and More)```
+
+# results = collection.find({})
